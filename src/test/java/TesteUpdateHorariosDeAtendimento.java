@@ -103,5 +103,23 @@ public class TesteUpdateHorariosDeAtendimento {
         String horario = updateHorariosDeAtendimento.buscaNomeDoProfessorDoHorarioDeAtendimento(8);
     }
 
-    
+    @Test(expected = EmptyStackException.class)
+    public void buscaPredioDoHorarioDeAtendimentoComNomeInvalido() {
+        String predio = updateHorariosDeAtendimento.buscaPredioDoHorarioDeAtendimentoPorNome("João");
+    }
+
+    @Test(expected = EmptyStackException.class)
+    public void buscaHorarioDoHorarioDeAtendimentoComNomeInvalido() {
+        String horario = updateHorariosDeAtendimento.buscaHorarioDoHorarioDeAtendimentoPorNome("Diego");
+    }
+
+    @Test(expected = EmptyStackException.class)
+    public void buscaPeriodoDoHorarioDeAtendimentoComNomeInvalido() {
+        String periodo = updateHorariosDeAtendimento.buscaPeriodoDoHorarioDeAtendimentoPorNome("Laura");
+    }
+
+    @Test(expected = EmptyStackException.class)
+    public void buscaSalaDoHorarioDeAtendimentoComNomeInvalido() {
+        String sala = updateHorariosDeAtendimento.buscaSalaDoHorarioDeAtendimentoPorNome("Daiane");
+    }
 }
