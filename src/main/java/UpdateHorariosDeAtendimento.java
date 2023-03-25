@@ -8,10 +8,12 @@ public class UpdateHorariosDeAtendimento {
         this.horariosDeAtendimentoService = service;
     }
 
-    public JsonObject buscaHorarioDeAtendimento(int id) {
+    public String buscaProfessorDoHorarioDeAtendimento(int id) {
         String horarioDeAtendimentoJson = horariosDeAtendimentoService.busca(id);
         JsonObject jsonObject = JsonParser.parseString(horarioDeAtendimentoJson).getAsJsonObject();
 
-        return jsonObject;
+        String nomeDoProfessor = jsonObject.get("nomeDoProfessor").getAsString();
+
+        return nomeDoProfessor;
     }
 }
