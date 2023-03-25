@@ -47,32 +47,32 @@ public class TesteUpdateHorariosDeAtendimento {
     }
 
     @Test
-    public void buscaNomeDoProfessorDoHorarioDeAtendimentoProfessorMarcelo() {
-        String nomeDoProfessor = updateHorariosDeAtendimento.buscaNomeDoProfessorDoHorarioDeAtendimento(3);
+    public void buscaNomeDoProfessorDoHorarioDeAtendimentoProfessorMarceloPorSala() {
+        String nomeDoProfessor = updateHorariosDeAtendimento.buscaNomeDoProfessorDoHorarioDeAtendimentoPorSala("18");
         assertEquals("Marcelo", nomeDoProfessor);
     }
 
     @Test
-    public void buscaPredioDoHorarioDeAtendimentoProfessorVitor() {
-        String predio = updateHorariosDeAtendimento.buscaPredioDoHorarioDeAtendimento(4);
+    public void buscaPredioDoHorarioDeAtendimentoProfessorVitorPorNome() {
+        String predio = updateHorariosDeAtendimento.buscaPredioDoHorarioDeAtendimentoPorNome("Vitor");
         assertEquals("1", predio);
     }
 
     @Test
-    public void buscaSalaDoHorarioDeAtendimentoProfessorVitor() {
-        String sala = updateHorariosDeAtendimento.buscaSalaDoHorarioDeAtendimento(4);
+    public void buscaSalaDoHorarioDeAtendimentoProfessorVitorPorNome() {
+        String sala = updateHorariosDeAtendimento.buscaSalaDoHorarioDeAtendimentoPorNome("Vitor");
         assertEquals("3", sala);
     }
 
     @Test
-    public void buscaPeriodoDoHorarioDeAtendimentoProfessorSamuel() {
-        String periodo = updateHorariosDeAtendimento.buscaPeriodoDoHorarioDeAtendimento(5);
+    public void buscaPeriodoDoHorarioDeAtendimentoProfessorSamuelPorSala() {
+        String periodo = updateHorariosDeAtendimento.buscaPeriodoDoHorarioDeAtendimentoPorSala("25");
         assertEquals("Integral", periodo);
     }
 
     @Test
-    public void buscaHorarioDoHorarioDeAtendimentoProfessorSamuel() {
-        String horario = updateHorariosDeAtendimento.buscaHorarioDoHorarioDeAtendimento(5);
+    public void buscaHorarioDoHorarioDeAtendimentoProfessorSamuelPorNome() {
+        String horario = updateHorariosDeAtendimento.buscaHorarioDoHorarioDeAtendimentoPorNome("Samuel");
         assertEquals("08:00", horario);
     }
 
@@ -121,5 +121,10 @@ public class TesteUpdateHorariosDeAtendimento {
     @Test(expected = EmptyStackException.class)
     public void buscaSalaDoHorarioDeAtendimentoComNomeInvalido() {
         String sala = updateHorariosDeAtendimento.buscaSalaDoHorarioDeAtendimentoPorNome("Daiane");
+    }
+
+    @Test(expected = EmptyStackException.class)
+    public void buscaNomeDoProfessorDoHorarioDeAtendimentoComSalaInvalida() {
+        String nomeDoProfessor = updateHorariosDeAtendimento.buscaNomeDoProfessorDoHorarioDeAtendimentoPorSala("30");
     }
 }

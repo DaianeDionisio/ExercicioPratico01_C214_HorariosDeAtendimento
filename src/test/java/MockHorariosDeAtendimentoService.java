@@ -37,4 +37,22 @@ public class MockHorariosDeAtendimentoService implements HorariosDeAtendimentoSe
                 return "";
         }
     }
+
+    @Override
+    public String buscaPorSala(String sala) {
+        switch (sala) {
+            case "6":
+                return HorariosDeAtendimentoConst.Chris;
+            case "20":
+                return HorariosDeAtendimentoConst.Renzo;
+            case "18":
+                return HorariosDeAtendimentoConst.Marcelo;
+            case "3":
+                return HorariosDeAtendimentoConst.Vitor;
+            case "25":
+                return HorariosDeAtendimentoConst.Samuel;
+            default:
+                return "";
+        }
+    }
 }
