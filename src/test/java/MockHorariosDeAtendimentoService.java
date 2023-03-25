@@ -1,10 +1,20 @@
+import java.util.EmptyStackException;
+
 public class MockHorariosDeAtendimentoService implements HorariosDeAtendimentoService{
 
     @Override
     public String busca(int id) {
-        if (id == 1) {
-            return HorariosDeAtendimentoConst.Chris;
+        switch (id) {
+            case 1:
+                return HorariosDeAtendimentoConst.Chris;
+            case 2:
+                return HorariosDeAtendimentoConst.Renzo;
+            case 3:
+                return HorariosDeAtendimentoConst.Marcelo;
+            case 4:
+                return HorariosDeAtendimentoConst.Vitor;
+            default:
+                throw new EmptyStackException();
         }
-        return null;
     }
 }
