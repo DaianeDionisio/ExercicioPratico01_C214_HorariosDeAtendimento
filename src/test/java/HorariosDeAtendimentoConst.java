@@ -26,4 +26,11 @@ public class HorariosDeAtendimentoConst {
                     "\"periodo\": \"Noturno\", \n " +
                     "\"sala\": \"3\", \n " +
                     "\"predio\": [1, 2, 3, 4, 6] }" ;
+
+    public static String Samuel =
+            "{ \"nomeDoProfessor\": \"Samuel\", \n " +
+                    "\"horarioDeAtendimento\": \"08:00\", \n " +
+                    "\"periodo\": \"Integral\", \n " +
+                    "\"sala\": \"25\", \n " +
+                    "\"predio\": [1, 2, 3, 4, 6] }" ;
 }

@@ -1,6 +1,8 @@
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.util.EmptyStackException;
+
 public class UpdateHorariosDeAtendimento {
     HorariosDeAtendimentoService horariosDeAtendimentoService;
 
@@ -9,6 +11,8 @@ public class UpdateHorariosDeAtendimento {
     }
 
     public String buscaNomeDoProfessorDoHorarioDeAtendimento(int id) {
+        if (id < 1 || id > 5) throw new EmptyStackException();
+
         String horarioDeAtendimentoJson = horariosDeAtendimentoService.busca(id);
         JsonObject jsonObject = JsonParser.parseString(horarioDeAtendimentoJson).getAsJsonObject();
 
@@ -18,6 +22,8 @@ public class UpdateHorariosDeAtendimento {
     }
 
     public String buscaPredioDoHorarioDeAtendimento(int id) {
+        if (id < 1 || id > 5) throw new EmptyStackException();
+
         String horarioDeAtendimentoJson = horariosDeAtendimentoService.busca(id);
         JsonObject jsonObject = JsonParser.parseString(horarioDeAtendimentoJson).getAsJsonObject();
 
@@ -40,6 +46,8 @@ public class UpdateHorariosDeAtendimento {
     }
 
     public String buscaHorarioDoHorarioDeAtendimento(int id) {
+        if (id < 1 || id > 5) throw new EmptyStackException();
+
         String horarioDeAtendimentoJson = horariosDeAtendimentoService.busca(id);
         JsonObject jsonObject = JsonParser.parseString(horarioDeAtendimentoJson).getAsJsonObject();
 
@@ -49,6 +57,8 @@ public class UpdateHorariosDeAtendimento {
     }
 
     public String buscaPeriodoDoHorarioDeAtendimento(int id) {
+        if (id < 1 || id > 5) throw new EmptyStackException();
+
         String horarioDeAtendimentoJson = horariosDeAtendimentoService.busca(id);
         JsonObject jsonObject = JsonParser.parseString(horarioDeAtendimentoJson).getAsJsonObject();
 
@@ -58,6 +68,8 @@ public class UpdateHorariosDeAtendimento {
     }
 
     public String buscaSalaDoHorarioDeAtendimento(int id) {
+        if (id < 1 || id > 5) throw new EmptyStackException();
+
         String horarioDeAtendimentoJson = horariosDeAtendimentoService.busca(id);
         JsonObject jsonObject = JsonParser.parseString(horarioDeAtendimentoJson).getAsJsonObject();
 

@@ -13,8 +13,10 @@ public class MockHorariosDeAtendimentoService implements HorariosDeAtendimentoSe
                 return HorariosDeAtendimentoConst.Marcelo;
             case 4:
                 return HorariosDeAtendimentoConst.Vitor;
+            case 5:
+                return HorariosDeAtendimentoConst.Samuel;
             default:
-                throw new EmptyStackException();
+                return "";
         }
     }
 }
