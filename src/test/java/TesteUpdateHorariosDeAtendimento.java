@@ -17,4 +17,11 @@ public class TesteUpdateHorariosDeAtendimento {
         String nomeDoProfessor = updateHorariosDeAtendimento.buscaProfessorDoHorarioDeAtendimento(1);
         assertEquals("Chris", nomeDoProfessor);
     }
+
+    @Test
+    public void buscaPredioDoHorarioDeAtendimentoProfessorChris() {
+        String predioDoAtendimento = updateHorariosDeAtendimento.buscaPredioDoHorarioDeAtendimento(1);
+        assertEquals("2", predioDoAtendimento);
+    }
+
 }

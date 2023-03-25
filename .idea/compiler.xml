@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ExercicioPratico01_C214_HorariosDeAtendimento" />
         <module name="ExercicioPratico_C214_HorariosDeAtendimento" />
       </profile>
     </annotationProcessing>
